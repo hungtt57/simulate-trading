@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=1170">
+    <link rel="icon" href="images/favicon.ico">
+
+    <title>WikiAllergies</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="js/slide/jquery.bxslider.css" rel="stylesheet" />
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css?v=2.1.7" type="text/css" media="screen" />
+    <link href="css/jquery-ui.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap-tokenfield.css" type="text/css"/>
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <link href="css/darkroom.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script type="text/javascript" src="js/fancybox/jquery.fancybox.pack.js?v=2.1.7"></script>
+    <script type="text/javascript" src="js/slide/jquery.bxslider.min.js"></script>	
+    <script type="text/javascript" src="js/bootstrap-tokenfield.min.js"></script>
+    <script src='js/Chart.min.js'></script>
+    <script src="js/jquery.bootstrap-touchspin.js"></script>
+    <script src="js/bootstrap-datetimepicker.js"></script>
+    <script type="text/javascript" src="js/moljs.js"></script>
+    
+    
+    
+    
+    
+  </head>
+
+  <body>
+   
+ 
+  
+  <div class="header smallheader">
+  	<div class="container">
+    	<div class="row table-row">
+        	<div class="col-xs-2 logo"><h1><a href="index.html"><img src="images/logo_s.png" alt="WikiAllergies" title="WikiAllergies"></a></h1></div>
+            <div class="col-xs-10 menu"><!--Menu after logged in-->
+            	<ul class="mainmenu"> 
+                	<li><a href="profile.html"><div class="avatar" style="background-image: url(images/avatar4_thumb.jpg)"></div> Ngoc Thuy Do</a></li>               
+                    <li><a href="index_member.html">Home</a></li>
+                    <li><a href="doctor_appointment.html">Appointment</a></li>                    
+                    <li><a href="#">Log Out</a></li>
+                    <li class="numnav newmessage"><a href="#/" paneltarget="#newmessage"><i class="fa fa-envelope"></i><span class="num">8</span></a></li>
+                    <li class="numnav friendres"><a href="#/" paneltarget="#friendres"><i class="fa fa-users"></i><span class="num">8</span></a></li>
+                    <li class="numnav notes"><a href="#/" paneltarget="#notes"><i class="fa fa-bell"></i><span class="num">8</span></a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="quickpanel row">
+        
+        	<!--Notifications-->
+        	<div class="panelbox" id="notes">
+            	 <div class="smalltitle">Notifications</div>
+                 <div class="panelitem">
+                	<a href="#/"><div class="col-xs-2"><div class="avatar" style="background-image: url('images/avatar2_thumb.jpg')"></div></div>
+                    <div class="col-xs-10"><strong>Dr. Anh Nguyen</strong> commented on you post
+                  		<div class="time">July 18 18:08PM</div>
+                    </div>
+                    </a>
+                </div>
+                <div class="panelitem">
+                	<a href="#/"><div class="col-xs-2"><div class="avatar" style="background-image: url('images/avatar2_thumb.jpg')"></div></div>
+                    <div class="col-xs-10"><strong>Dr. Anh Nguyen</strong> liked on you post
+                  		<div class="time">July 18 18:08PM</div>
+                    </div>
+                    </a>
+                </div>
+                <div class="panelitem">
+                	<a href="#/"><div class="col-xs-2"><div class="avatar" style="background-image: url('images/avatar2_thumb.jpg')"></div></div>
+                    <div class="col-xs-10"><strong>Dr. Anh Nguyen</strong> posted on your profile
+                  		<div class="time">July 18 18:08PM</div>
+                    </div>
+                    </a>
+                </div>
+               
+                <div class="col-xs-12 panelfoot"><a href="#/">View all</a></div>
+                
+            </div>
+            <!--/#notes-->
+            
+            <!--New Messages-->
+        	<div class="panelbox" id="newmessage">
+            	 <div class="smalltitle">New Messages</div>
+                 <div class="panelitem">
+                	<a href="#/"><div class="col-xs-2"><div class="avatar" style="background-image: url('images/avatar2_thumb.jpg')"></div></div>
+                    <div class="col-xs-10"><strong>Dr. Anh Nguyen</strong>
+                    	<div class="messcont">I made Appointment to your clinic...</div>
+                  		<div class="time">July 18 18:08PM</div>
+                    </div>
+                    </a>
+                 </div>
+                 <div class="panelitem">
+                	<a href="#/"><div class="col-xs-2"><div class="avatar" style="background-image: url('images/avatar2_thumb.jpg')"></div></div>
+                    <div class="col-xs-10"><strong>Dr. Anh Nguyen</strong>
+                    	<div class="messcont">About the article you wrote...</div>
+                  		<div class="time">July 18 18:08PM</div>
+                    </div>
+                    </a>
+                 </div>
+                  <div class="panelitem">
+                	<a href="#/"><div class="col-xs-2"><div class="avatar" style="background-image: url('images/avatar2_thumb.jpg')"></div></div>
+                    <div class="col-xs-10"><strong>Dr. Anh Nguyen</strong>
+                    	<div class="messcont">Sed molestie molestie ipsum a euismod. Integer placerat magna id enim luctus tristique. </div>
+                  		<div class="time">July 18 18:08PM</div>
+                    </div>
+                    </a>
+                 </div>
+
+               
+                <div class="col-xs-12 panelfoot"><a href="#/">View all</a></div>
+                
+            </div>
+            <!--/#notes-->
+        
+        
+        	<!--Friend Request-->
+        	<div class="panelbox" id="friendres">
+            	<div class="smalltitle">Friend Request</div>
+                <div class="panelitem">
+                  <div class="col-xs-2"><div class="avatar" style="background-image: url('images/avatar2_thumb.jpg')"></div></div>
+                  <div class="col-xs-4 username"><a href="#/">Dr. Anh Nguyen</a></div>
+                  <div class="col-xs-6 action"><button class="btn smallbtn">Comfirm</button> <button class="btn smallbtn">Delete</button></div>
+                </div>
+                <div class="panelitem">
+                  <div class="col-xs-2"><div class="avatar" style="background-image: url('images/avatar2_thumb.jpg')"></div></div>
+                  <div class="col-xs-4 username"><a href="#/">Dr. Anh Nguyen</a></div>
+                  <div class="col-xs-6 action"><button class="btn smallbtn">Comfirm</button> <button class="btn smallbtn">Delete</button></div>
+                </div>
+                <div class="panelitem">
+                  <div class="col-xs-2"><div class="avatar" style="background-image: url('images/avatar2_thumb.jpg')"></div></div>
+                  <div class="col-xs-4 username"><a href="#/">Dr. Anh Nguyen</a></div>
+                  <div class="col-xs-6 action"><button class="btn smallbtn">Comfirm</button> <button class="btn smallbtn">Delete</button></div>
+                </div>
+                <div class="col-xs-12 panelfoot"><a href="#/">View all</a></div>
+                
+            </div>
+            <!--/#friendres-->
+           
+            
+            
+        </div>        
+    </div>
+  </div><!--/.header-->
+  
+  <div class="content container">  
+	<div class="row">
+        <div class="col-xs-8">
+        	
+            	<img src="images/immuintro.png" alt="WikiAllergies Immunotherapy">
+
+        </div>
+        <div class="col-xs-4 maincontent">                    
+            <div class="editproviewport blockcont">
+                
+                <h2 class="smalltitle">Sign in</h2>
+                <div>Please sign in again to use this feature</div>
+                <form>
+                <div class="prolabel fullw note">Email</div>
+                <div class="profield fullw"><input type="text"></div>
+                <div class="prolabel fullw note">Account Password</div>
+                <div class="profield fullw"><input type="password"></div>
+                <div class="prolabel fullw note">Clinic Password</div>
+                <div class="profield fullw"><input type="password"></div>
+                <div class="prolabel fullw"></div>
+                <div class="profield fullw"><a href="#">&raquo; Forgot your password?</a></div>
+                <div class="prosubmit fullw"><input type="submit" class="btn" value="Sign in"></div>
+                </form>                   
+
+                
+            </div><!--/.editproviewport-->
+            </div><!--/.maincontent-->
+        </div>
+        
+
+  </div><!--/.content-->
+  
+  <div class="footer">
+  	<div class="container">
+    	<div class="row">
+        	<div class="col-xs-6 copyright">
+            Copyright &copy; <strong>WikiAllergies</strong> 2016. All right reserved.
+            </div>
+            <div class="col-xs-6 text-right links">
+            <a href="#/">About</a><a href="#/">Contact</a><a href="#/">Terms of Use</a>
+            </div>
+        </div>
+    </div>
+  </div><!--/.footer-->
+  
+  
+    
+
+
+    
+    
+  </body>
+</html>

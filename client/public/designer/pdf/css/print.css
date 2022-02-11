@@ -1,0 +1,289 @@
+@charset "utf-8";
+/* WikiAllegies Document
+   by mol/ Ngoc Thuy Do - thuydodesign@gmail.com
+   http://www.ngocthuydoc.com
+*/
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+
+overflow-x: auto;
+box-sizing: border-box
+
+
+     }
+
+
+body {
+		margin: 0 auto;
+		font-family:  Arial, sans-serif;
+		font-size: 11pt;
+		color: #222;
+		max-width: 551pt;
+}
+
+@page {
+  size: letter;
+  margin: 30pt;
+}
+
+@page {
+
+  @bottom-center {
+    content: counter(page);
+    text-align: center;
+    vertical-align: top;
+    padding-top: 2em;
+  }
+}
+
+.pagebreak{
+  page-break-before: always;
+}
+
+
+h1, h2, h3, h4, h5 {
+  page-break-after: avoid;
+}
+table, figure {
+  page-break-inside: avoid;
+}
+
+h1{
+	font-family: Montserrat, Arial, sans-serif;
+	font-size: 14pt;
+	color: #000;
+	margin: 0;
+}
+
+h2{
+	font-size: 11pt;
+	font-family: Montserrat, Arial, sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: 0;
+}
+
+
+.tbhead{
+	font-weight: 800;
+	color: #fff;
+	background: #0073a3;
+	text-align: left;
+}
+
+.title{
+	border-bottom: 3px dotted #1cb3d9;
+}
+
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.text-center{
+	text-align: center;
+}
+.row:before, .row:after, .itemlisttable li:before, .itemlisttable li:after, .panelgroup:before, .panelgroup:after{
+	display: table;
+	content: "";
+	height: 0;
+	visibility: hidden;
+	clear: both;
+}
+
+.row > div{
+	float: left;}
+.row > .col-6 {
+	width: 50%;
+}
+.row > .col-3 {
+	width: 25%;
+}
+
+.blockcont{
+	margin-top: 7.5pt;
+}
+
+.line {
+	    border-bottom: 2px solid #d6e3bc;
+}
+
+.testinfo > .row > div {
+	border-bottom: 1pt dotted #999;
+}
+.testinfo > .row > div > strong{
+	margin-bottom: -3pt;
+	padding-bottom: 3pt;
+	display: inline-block;
+	background: #fff;
+}
+
+.itemlisttable, .itemlisttable ul, .itemlisttable li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.itemlisttable li > div {
+	display: inline-block;
+	float: left;
+	white-space: nowrap;
+	overflow: hidden;
+    text-overflow: ellipsis;
+}
+.panellist > li {
+	position: relative;
+	width: 100%;
+	padding-left: 25pt;
+	overflow: hidden;
+	border-left: 1pt solid #000;
+	border-bottom: 1pt solid #000;
+}
+.panellist.right > li {
+	border-right: 1pt solid #000;
+}
+.panellist > li:not(.itemlisthead) > div{
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: rotate(-90deg);
+    width: 80pt;
+	height: 20pt;
+	margin-left: -25pt;
+	margin-top: -10pt;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 12pt;
+	font-family: Montserrat, Arial, sans-serif;
+}
+
+
+.panellist > li > ul > li > div {
+	border-left: 1pt solid #000;
+	border-bottom: 1pt solid #000;
+	padding: 1.5pt;
+	line-height: 11pt;
+	height: 14.5pt !important;
+}
+.panellist > li > ul > li:last-child > div {
+	border-bottom: 0;
+}
+.panellist > li > ul > .cat{
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.panellist > li > ul > li > div:first-child {
+	width: 60%;
+}
+.panellist > li > ul > li > div:nth-child(2), .panellist > li > ul > li > div:nth-child(3) {
+	width: 20%;
+}
+
+.panellist > li.dark {
+    background: #d6e3bc;
+}
+.panellist > li:not(.dark){
+    background: #d9d9d9;
+}
+
+.panellist > li:not(.dark) > ul {
+	background: white;
+}
+.panellist > li.itemlisthead {
+		text-align: center;
+	background: #7f7f7f !important;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-family: Montserrat, Arial, sans-serif;
+	
+	padding-left: 25pt;
+	border-top: 1pt solid #000;
+}
+
+.panellist > li.itemlisthead > div {
+	border-left: 1pt solid #000;
+	height: 22pt;
+	overflow: hidden;
+}
+.panellist > li.itemlisthead .small{
+	display: block;
+	font-size: 8pt;
+	line-height: 8pt;
+	font-weight: normal;
+}
+
+.panellist > li.itemlisthead > div:first-child{
+	width: 60%;
+	font-size: 15pt;
+	line-height: 22pt;
+}
+.panellist > li.itemlisthead > div:nth-child(2), .panellist > li.itemlisthead > div:nth-child(3){
+	width: 20%;
+
+}
+.panellist {
+    width: 50%;
+	float: left;
+}
+.panellist.right > li:nth-child(2) > ul {
+	margin-top: -1pt;
+}
+
+.bold {
+	font-weight: bold;
+}
+.panelgroup {
+	position: relative;
+}
+
+.testnote {
+	font-size: 8pt;
+	padding: 7pt;
+	border: 1pt solid #000;
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+}
+
+.ol {
+	margin: 7pt 0;
+}
+
+.panelgroup.blank .itemlisthead{
+	text-transform: none !important;
+	padding: 2pt !important;
+}
+/*.panellist {
+	-moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+	column-gap: 0pt;
+}
+.panellist > li > ul > li {
+	-webkit-column-break-inside: avoid;
+    -moz-column-break-inside:avoid;
+    -moz-page-break-inside:avoid;
+    page-break-inside: avoid;
+    break-inside: avoid-column;
+}
+.panellist > li > ul > li.breakcol{
+	break-after: column;
+    -moz-column-break-after: column;
+    -webkit-column-break-after: column;
+}*/
+
+@media print {
+  a[href]:after {
+    content: none !important;
+  }
+
+}

@@ -1,0 +1,37 @@
+.darkroom-container{position:relative;}.darkroom-image-container{top:0;left:0;}.darkroom-toolbar{display:block;position:absolute;top:-45px;left:0;height:40px;min-width:40px;z-index:99;border-radius:2px;white-space:nowrap;padding:0 5px;}/*.darkroom-toolbar:before{content:"";position:absolute;bottom:-7px;left:20px;width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-top:7px solid #444;}*/.darkroom-button-group{display:inline-block;margin:0;padding:0;}.darkroom-button-group:last-child{border-right:none;}.darkroom-button{box-sizing:border-box;background:transparent;border:none;outline:none;padding:2px 0 0 0;width:40px;height:40px;}.darkroom-button:hover{cursor:pointer;background:#d9df20 !important;}.darkroom-button:active{cursor:pointer;background:#333;}.darkroom-button:disabled .darkroom-icon{fill:#c2c2c2;}.darkroom-button:disabled:hover{cursor: not-allowed}.darkroom-button.darkroom-button-active .darkroom-icon{fill:#bec500;}.darkroom-button.darkroom-button-hidden{display:none;}.darkroom-button.darkroom-button-success .darkroom-icon{fill:#faaf3a;}.darkroom-button.darkroom-button-warning .darkroom-icon{fill:#FFBB33;}.darkroom-button.darkroom-button-danger .darkroom-icon{fill:#FF4444;}.darkroom-icon{width:24px;height:24px;fill:#898989;}
+
+.darkroom-button:hover .darkroom-icon{fill:#fff !important;}
+figure {
+  margin: 0;
+}
+.image-container {
+  display: inline-block;
+  max-width: 100%;
+  background: white;
+  /*padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #e2e2e2;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;*/
+}
+
+.image-container.target {
+  margin-top: 40px;
+}
+
+.image-container img {
+  max-width: 100%;
+}
+
+.image-container .image-meta {
+  margin-top: 10px;
+  font-size: 12px;
+  text-align: left;
+}
+.image-container .image-meta a {
+  text-decoration: none;
+  color: #444;
+}
+.image-container .image-meta a:hover .image-meta-title {
+  text-decoration: underline;
+}

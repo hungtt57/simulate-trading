@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=1170">
+    <link rel="icon" href="images/favicon.ico">
+
+    <title>WikiAllergies</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="js/slide/jquery.bxslider.css" rel="stylesheet" />
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css?v=2.1.7" type="text/css" media="screen" />
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script type="text/javascript" src="js/slide/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="js/fancybox/jquery.fancybox.pack.js?v=2.1.7"></script>
+    <script src='js/Chart.min.js'></script>
+    <script type="text/javascript" src="js/moljs.js"></script>
+    
+    
+  </head>
+
+  <body>
+  
+      <!--Share write-->
+
+<div id="sharewrite" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="smalltitle">Share post</h4>
+      </div>
+      <div class="modal-body sharewriteform">
+          <form>
+              <textarea placeholder="What on your mind?"></textarea>
+              <div class="sharedpost post">
+
+			  	<div>
+                        <div class="smalltitle"><a href="profile.html" class="username">Dr. Tuan Anh</a></div>
+                        <!--<div class="rating">
+                        <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa  fa-star-half"></i> <a href="profile.html">See reviews</a>
+                        </div>-->
+                        <div class="time">At 15:15PM July 19th, 2016</div>
+				</div>
+                <div class="postcont">
+                 
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius, rutrum est et, porta quam. Donec eu finibus libero. Nullam metus justo, ullamcorper sed tristique et, blandit eu urna.  Donec eu finibus libero. Nullam metus justo, ullamcorper sed tristique et, blandit eu urna. Vestibulum consequat eget ligula quis efficitur. Nam feugiat vel odio eu porttitor. Morbi dignissim sem et posuere faucibus.
+                    <div class="readmore"><a href="#" class="light">Read more</a></div>
+                    <div class="gallery gal1pic">
+                    	<a href="images/postimage2_full.jpg" rel="post-gallery-1"><img src="images/postimage2_medium.jpg"></a>
+                    </div>
+                    
+                 </div><!--/.postcont-->
+              	 <div class="postmask"><div class="readmore"><a href="#/" class="light">Show all</a></div></div>	
+              </div>
+              <div class="prosubmit"><button class="btn submit">Share</button></div>
+          </form>
+            
+       </div><!--/.postform-->
+
+
+    </div>
+
+  </div>
+</div><!--/#sharewrite-->
+  
+  <div class="header">
+  	<div class="container">
+    	<div class="row table-row">
+        	<div class="col-xs-4 logo"><h1><a href="index.html"><img src="images/logo.png" alt="WikiAllergies" title="WikiAllergies"></a></h1></div>
+            <div class="col-xs-8 menu"><!--Menu before logged in-->
+            	<a href="#">Forgot account & password?</a>
+            	<ul class="signinmenu">
+                <li class="signinform">
+                	<form>
+                  	<div class="signinforminput">
+                    <span  class="emailinput"><input type="email" placeholder="Email address"></span>
+                    <span  class="passinput"><input type="password" placeholder="Password"></span>
+                    </div>
+                	<button class="btn signinsubmit">Sign In</button>
+                    </form>
+                </li>
+                <li><a href="#" class="btn">Sign Up</a></li>
+                </ul>
+            </div>
+        </div>        
+    </div>
+  </div><!--/.header-->
+  
+  <div class="content container">  
+  	<div class="row">
+    
+    	<div class="col-xs-3 sidebar">
+        	<div class="topsearchform blockcont">
+            	<form>
+                	<input type="text" placeholder="Search WikiAllergies" class="keyinput" value="The keywords">
+                    <button class="submit org"><i class="fa fa-search"></i></button>
+                </form>
+                <div class="clear"></div>
+            </div>
+            
+            <div class="allersearch blockcont">
+            	<div class="box hightlight">Find The Nearest Allergist</div>
+                <form>
+                	<input type="text" placeholder="Enter keywords (Optional)">
+					<input type="text" placeholder="City or Zip Code">
+                    <button class="submit btn org"><i class="fa fa-search"></i> Search now</button>
+                </form>
+            </div>
+            
+            <div class="blockcont menuitem boxend"><a href="#">News Feed</a></div>
+            <div class="blockcont menuitem boxend"><a href="#">Ask The Allergist</a></div>
+            
+            <div class="blockcont sidebanner">
+            <img src="images/bannerdemo270x465.jpg" alt="Some banner here">
+            </div>
+       
+        </div><!--/.sidebar-->
+        
+        <div class="col-xs-9 maincontent">
+
+            <div class="blockcont post searchresult">
+            	<h2 class="headnote"> <i class="far fa-newspaper"></i> Articles</h2>
+                <ul class="smallpostlist">
+                    <li class="hasthumb"><!--If the post has images or video, the <li> needs class "hasthumb"-->
+                        <div class="row">                
+                            <div class="col-xs-1">
+                                <div class="avatar" style="background-image: url('images/avatar2_thumb.jpg')"></div>
+                            </div>                        
+                            <div class="col-xs-11 info">                            
+                                <a href="profile.html" class="username">Dr. Tuan Anh <span class="rating"><!--Sample with 4.5 stars rating:-->
+                                <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa  fa-star-half"></i></span></a>                         
+                                <div class="time">At 15:15PM July 19th, 2016</div>
+                            </div>                    
+                        </div>                 
+                        <div class="postcont">
+                            <div class="smalltitle">This is a doctor’s article, with images, keywords found in comments</div><!--limit display for: title - 85 characters, content - 250 characters-->
+                            ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...  <a href="#/" class="light">Read more</a>
+                            <div class="gallery galthumb">
+                                <a href="/#" style="background-image: url('images/postimage2_thumb.jpg')" rel="post-gallery-2" alt="Some caption here Some caption here" title="Some caption here Some caption here"></a>
+                            </div>
+                         </div><!--/.postcont-->
+                     
+                         <div class="postaction">
+                            <div class="row">
+                                <div class="col-xs-8 theaction">
+                                    <span class="like">Like</span>
+                                    <span class="comment">Comment</span>
+                                    <span class="share">Share</span>
+                                    <div class="washare">
+                                        <ul>
+                                            <li><a href="#/"><i class="fa  fa-retweet"></i> Share now</a></li>
+                                            <li><a href="#/" data-toggle="modal" data-target="#sharewrite"><i class="fa fa-pencil-square-o"></i> Write & Share</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                               <div class="col-xs-4 thenumber">
+                                    <span class="like">818</span>
+                                    <span class="comment">12</span>
+                                    <span class="share">113</span>
+                                </div>
+                            </div>
+                         </div><!--/.postaction-->
+                         
+                         <div class="commentsearch postcomment" style="display: block"><!--remove style when in use-->
+                         	<ul>
+                            	<li><form><textarea placeholder="Write a comment..."></textarea></form>
+                                </li>
+                            	<li><div class="detail"><strong><a href="profile.html">Dr. Thuy Anh</a></strong> <a href="#/"><span class="time">At 15:15PM July 19th, 2016</span></a></div>
+                                ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...
+                                	<div class="comtaction"><span class="comtlike">Like</span> <span class="comtreply">Reply</span> <span class="comtlikenum">88</span> <span class="comtreplynum">5</span></div>
+                                    <div class="commentreply commentsearch" style="display: block"><!--comment reply-->
+                                       	 <ul>
+                                             <li><form><textarea placeholder="Write a comment..."></textarea></form></li>
+                                             <li><div class="detail"><strong><a href="profile.html">Dr. Thuy Anh</a></strong> <a href="#/"><span class="time">At 15:15PM July 19th, 2016</span></a></div>
+                                    ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...
+                                                <div class="comtaction"><span class="comtlike">Like</span> <span class="comtreply">Reply</span> <span class="comtlikenum">88</span> <span class="comtreplynum">5</span></div>
+                                            </li>
+                               			</ul>
+                                    </div>
+                                	
+                                </li>
+                                <li><div class="detail"><strong><a href="profile.html">Dr. Thuy Anh</a></strong> <a href="#/"><span class="time">At 15:15PM July 19th, 2016</span></a></div>
+                                ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...
+                                	<div class="comtaction"><span class="comtlike">Like</span> <span class="comtreply">Reply</span> <span class="comtlikenum">88</span> <span class="comtreplynum">5</span></div>
+                                    <div class="commentreply commentsearch"><!--comment reply-->
+                                       	 <ul>
+                                             <li><form><textarea placeholder="Write a comment..."></textarea></form></li>
+                                             <li><div class="detail"><strong><a href="profile.html">Dr. Thuy Anh</a></strong> <a href="#/"><span class="time">At 15:15PM July 19th, 2016</span></a></div>
+                                    ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...
+                                                <div class="comtaction"><span class="comtlike">Like</span> <span class="comtreply">Reply</span> <span class="comtlikenum">88</span> <span class="comtreplynum">5</span></div>
+                                            </li>
+                               			</ul>
+                                    </div>
+                                	
+                                </li>
+                                <li>
+                                <div class="row">
+                            		<div class="col-xs-6"><a href="#/" class="light">View more comments</a></div>
+                            		<div class="col-xs-6 text-right">2 of 12</div>
+                                </div>
+                                </li>
+                            </ul>
+
+                         </div>
+                    </li>
+                    <li class="hasthumb"><!--If the post has images or video, the <li> needs class "hasthumb"-->
+                        <div class="row">                
+                            <div class="col-xs-1">
+                                <div class="avatar" style="background-image: url('images/avatar2_thumb.jpg')"></div>
+                            </div>                        
+                            <div class="col-xs-11 info">                            
+                                <a href="profile.html" class="username">Dr. Tuan Anh <span class="rating"><!--Sample with 4.5 stars rating:-->
+                                <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa  fa-star-half"></i></span></a>                         
+                                <div class="time">At 15:15PM July 19th, 2016</div>
+                            </div>                    
+                        </div>                 
+                        <div class="postcont">
+                            <div class="smalltitle">This is a doctor’s article, with video</div><!--limit display for: title - 85 characters, content - 250 characters-->
+                            ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...  <a href="#/" class="light">Read more</a>
+                            <div class="gallery galthumb video">
+                                <a href="/#" style="background-image: url('images/postimage2_thumb.jpg')" rel="post-gallery-2" alt="Some caption here Some caption here" title="Some caption here Some caption here"></a>
+                            </div>
+                         </div><!--/.postcont-->
+                     
+                         <div class="postaction">
+                            <div class="row">
+                                <div class="col-xs-8 theaction">
+                                    <span class="like">Like</span>
+                                    <span class="comment">Comment</span>
+                                    <span class="share">Share</span>
+                                    <div class="washare">
+                                        <ul>
+                                            <li><a href="#/"><i class="fa  fa-retweet"></i> Share now</a></li>
+                                            <li><a href="#/" data-toggle="modal" data-target="#sharewrite"><i class="fa fa-pencil-square-o"></i> Write & Share</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                               <div class="col-xs-4 thenumber">
+                                    <span class="like">818</span>
+                                    <span class="comment">12</span>
+                                    <span class="share">113</span>
+                                </div>
+                            </div>
+                         </div><!--/.postaction-->
+                         
+                         <div class="commentsearch postcomment">
+                         	<ul>
+                            	<li><form><textarea placeholder="Write a comment..."></textarea></form>
+                                </li>
+                            	<li><div class="detail"><strong><a href="profile.html">Dr. Thuy Anh</a></strong> <a href="#/"><span class="time">At 15:15PM July 19th, 2016</span></a></div>
+                                ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...
+                                	<div class="comtaction"><span class="comtlike">Like</span> <span class="comtreply">Reply</span> <span class="comtlikenum">88</span> <span class="comtreplynum">5</span></div>
+                                    <div class="commentreply commentsearch"><!--comment reply-->
+                                       	 <ul>
+                                             <li><form><textarea placeholder="Write a comment..."></textarea></form></li>
+                                             <li><div class="detail"><strong><a href="profile.html">Dr. Thuy Anh</a></strong> <a href="#/"><span class="time">At 15:15PM July 19th, 2016</span></a></div>
+                                    ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...
+                                                <div class="comtaction"><span class="comtlike">Like</span> <span class="comtreply">Reply</span> <span class="comtlikenum">88</span> <span class="comtreplynum">5</span></div>
+                                            </li>
+                               			</ul>
+                                    </div>
+                                	
+                                </li>
+                                <li><div class="detail"><strong><a href="profile.html">Dr. Thuy Anh</a></strong> <a href="#/"><span class="time">At 15:15PM July 19th, 2016</span></a></div>
+                                ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...
+                                	<div class="comtaction"><span class="comtlike">Like</span> <span class="comtreply">Reply</span> <span class="comtlikenum">88</span> <span class="comtreplynum">5</span></div>
+                                    <div class="commentreply commentsearch"><!--comment reply-->
+                                       	 <ul>
+                                             <li><form><textarea placeholder="Write a comment..."></textarea></form></li>
+                                             <li><div class="detail"><strong><a href="profile.html">Dr. Thuy Anh</a></strong> <a href="#/"><span class="time">At 15:15PM July 19th, 2016</span></a></div>
+                                    ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...
+                                                <div class="comtaction"><span class="comtlike">Like</span> <span class="comtreply">Reply</span> <span class="comtlikenum">88</span> <span class="comtreplynum">5</span></div>
+                                            </li>
+                               			</ul>
+                                    </div>
+                                	
+                                </li>
+                                <li>
+                                <div class="row">
+                            		<div class="col-xs-6"><a href="#/" class="light">View more comments</a></div>
+                            		<div class="col-xs-6 text-right">2 of 12</div>
+                                </div>
+                                </li>
+                            </ul>
+
+                         </div>
+                    </li>
+                    <li><!--If the post has images or video, the <li> needs class "hasthumb"-->
+                        <div class="row">                
+                            <div class="col-xs-1">
+                                <div class="avatar" style="background-image: url('images/avatar2_thumb.jpg')"></div>
+                            </div>                        
+                            <div class="col-xs-11 info">                            
+                                <a href="profile.html" class="username">Dr. Tuan Anh <span class="rating"><!--Sample with 4.5 stars rating:-->
+                                <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa  fa-star-half"></i></span></a>                         
+                                <div class="time">At 15:15PM July 19th, 2016</div>
+                            </div>                    
+                        </div>                 
+                        <div class="postcont">
+                            <div class="smalltitle">This is a doctor’s article, with no image or video</div><!--limit display for: title - 85 characters, content - 250 characters-->
+                            ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...  <a href="#/" class="light">Read more</a>
+                         </div><!--/.postcont-->
+                     
+                         <div class="postaction">
+                            <div class="row">
+                                <div class="col-xs-8 theaction">
+                                    <span class="like">Like</span>
+                                    <span class="comment">Comment</span>
+                                    <span class="share">Share</span>
+                                    <div class="washare">
+                                        <ul>
+                                            <li><a href="#/"><i class="fa  fa-retweet"></i> Share now</a></li>
+                                            <li><a href="#/" data-toggle="modal" data-target="#sharewrite"><i class="fa fa-pencil-square-o"></i> Write & Share</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                               <div class="col-xs-4 thenumber">
+                                    <span class="like">818</span>
+                                    <span class="comment">12</span>
+                                    <span class="share">113</span>
+                                </div>
+                            </div>
+                         </div><!--/.postaction-->
+                         
+                         <div class="commentsearch postcomment">
+                         	<ul>
+                            	<li><form><textarea placeholder="Write a comment..."></textarea></form>
+                                </li>
+                            	<li><div class="detail"><strong><a href="profile.html">Dr. Thuy Anh</a></strong> <a href="#/"><span class="time">At 15:15PM July 19th, 2016</span></a></div>
+                                ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...
+                                	<div class="comtaction"><span class="comtlike">Like</span> <span class="comtreply">Reply</span> <span class="comtlikenum">88</span> <span class="comtreplynum">5</span></div>
+                                    <div class="commentreply commentsearch"><!--comment reply-->
+                                       	 <ul>
+                                             <li><form><textarea placeholder="Write a comment..."></textarea></form></li>
+                                             <li><div class="detail"><strong><a href="profile.html">Dr. Thuy Anh</a></strong> <a href="#/"><span class="time">At 15:15PM July 19th, 2016</span></a></div>
+                                    ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...
+                                                <div class="comtaction"><span class="comtlike">Like</span> <span class="comtreply">Reply</span> <span class="comtlikenum">88</span> <span class="comtreplynum">5</span></div>
+                                            </li>
+                               			</ul>
+                                    </div>
+                                	
+                                </li>
+                                <li><div class="detail"><strong><a href="profile.html">Dr. Thuy Anh</a></strong> <a href="#/"><span class="time">At 15:15PM July 19th, 2016</span></a></div>
+                                ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...
+                                	<div class="comtaction"><span class="comtlike">Like</span> <span class="comtreply">Reply</span> <span class="comtlikenum">88</span> <span class="comtreplynum">5</span></div>
+                                    <div class="commentreply commentsearch"><!--comment reply-->
+                                       	 <ul>
+                                             <li><form><textarea placeholder="Write a comment..."></textarea></form></li>
+                                             <li><div class="detail"><strong><a href="profile.html">Dr. Thuy Anh</a></strong> <a href="#/"><span class="time">At 15:15PM July 19th, 2016</span></a></div>
+                                    ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...
+                                                <div class="comtaction"><span class="comtlike">Like</span> <span class="comtreply">Reply</span> <span class="comtlikenum">88</span> <span class="comtreplynum">5</span></div>
+                                            </li>
+                               			</ul>
+                                    </div>
+                                	
+                                </li>
+                                <li>
+                                <div class="row">
+                            		<div class="col-xs-6"><a href="#/" class="light">View more comments</a></div>
+                            		<div class="col-xs-6 text-right">2 of 12</div>
+                                </div>
+                                </li>
+                            </ul>
+
+                         </div>
+                    </li>
+                    <li class="seemore">
+                    	<a href="#/">See more results</a>
+                    </li>
+                </ul>
+                 
+            </div><!--/.post-->
+            
+            <div class="blockcont post searchresult">
+            	<h2 class="headnote"> <i class="far fa-file-alt"></i> Posts</h2>
+                <ul class="smallpostlist">
+                    <li class="hasthumb"><!--If the post has images or video, the <li> needs class "hasthumb"-->
+                        <div class="row">                
+                            <div class="col-xs-1">
+                                <div class="avatar" style="background-image: url('images/avatar2_thumb.jpg')"></div>
+                            </div>                        
+                            <div class="col-xs-11 info">                            
+                                <a href="profile.html" class="username">Dr. Tuan Anh <span class="rating"><!--Sample with 4.5 stars rating:-->
+                                <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa  fa-star-half"></i></span></a>                         
+                                <div class="time">At 15:15PM July 19th, 2016</div>
+                            </div>                    
+                        </div>                 
+                        <div class="postcont">
+                            ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...  <a href="#/" class="light">Read more</a>
+                            <div class="gallery galthumb">
+                                <a href="/#" style="background-image: url('images/postimage2_thumb.jpg')" rel="post-gallery-2" alt="Some caption here Some caption here" title="Some caption here Some caption here"></a>
+                            </div>
+                         </div><!--/.postcont-->
+                     
+                         <div class="postaction">
+                            <div class="row">
+                                <div class="col-xs-8 theaction">
+                                    <span class="like">Like</span>
+                                    <span class="comment">Comment</span>
+                                    <span class="share">Share</span>
+                                    <div class="washare">
+                                        <ul>
+                                            <li><a href="#/"><i class="fa  fa-retweet"></i> Share now</a></li>
+                                            <li><a href="#/" data-toggle="modal" data-target="#sharewrite"><i class="fa fa-pencil-square-o"></i> Write & Share</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                               <div class="col-xs-4 thenumber">
+                                    <span class="like">818</span>
+                                    <span class="comment">12</span>
+                                    <span class="share">113</span>
+                                </div>
+                            </div>
+                         </div><!--/.postaction-->
+                         
+                         <div class="commentsearch postcomment">
+                         	<ul>
+                            	<li><form><textarea placeholder="Write a comment..."></textarea></form>
+                                </li>
+                            	<li><div class="detail"><strong><a href="profile.html">Dr. Thuy Anh</a></strong> <a href="#/"><span class="time">At 15:15PM July 19th, 2016</span></a></div>
+                                ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...
+                                	<div class="comtaction"><span class="comtlike">Like</span> <span class="comtreply">Reply</span> <span class="comtlikenum">88</span> <span class="comtreplynum">5</span></div>
+                                    <div class="commentreply commentsearch"><!--comment reply-->
+                                       	 <ul>
+                                             <li><form><textarea placeholder="Write a comment..."></textarea></form></li>
+                                             <li><div class="detail"><strong><a href="profile.html">Dr. Thuy Anh</a></strong> <a href="#/"><span class="time">At 15:15PM July 19th, 2016</span></a></div>
+                                    ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...
+                                                <div class="comtaction"><span class="comtlike">Like</span> <span class="comtreply">Reply</span> <span class="comtlikenum">88</span> <span class="comtreplynum">5</span></div>
+                                            </li>
+                               			</ul>
+                                    </div>
+                                	
+                                </li>
+                                <li><div class="detail"><strong><a href="profile.html">Dr. Thuy Anh</a></strong> <a href="#/"><span class="time">At 15:15PM July 19th, 2016</span></a></div>
+                                ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...
+                                	<div class="comtaction"><span class="comtlike">Like</span> <span class="comtreply">Reply</span> <span class="comtlikenum">88</span> <span class="comtreplynum">5</span></div>
+                                    <div class="commentreply commentsearch"><!--comment reply-->
+                                       	 <ul>
+                                             <li><form><textarea placeholder="Write a comment..."></textarea></form></li>
+                                             <li><div class="detail"><strong><a href="profile.html">Dr. Thuy Anh</a></strong> <a href="#/"><span class="time">At 15:15PM July 19th, 2016</span></a></div>
+                                    ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...
+                                                <div class="comtaction"><span class="comtlike">Like</span> <span class="comtreply">Reply</span> <span class="comtlikenum">88</span> <span class="comtreplynum">5</span></div>
+                                            </li>
+                               			</ul>
+                                    </div>
+                                	
+                                </li>
+                                <li>
+                                <div class="row">
+                            		<div class="col-xs-6"><a href="#/" class="light">View more comments</a></div>
+                            		<div class="col-xs-6 text-right">2 of 12</div>
+                                </div>
+                                </li>
+                            </ul>
+
+                         </div>
+                    </li>
+                    <li class="hasthumb"><!--If the post has images or video, the <li> needs class "hasthumb"-->
+                        <div class="row">                
+                            <div class="col-xs-1">
+                                <div class="avatar" style="background-image: url('images/avatar2_thumb.jpg')"></div>
+                            </div>                        
+                            <div class="col-xs-11 info">                            
+                                <a href="profile.html" class="username">Dr. Tuan Anh <span class="rating"><!--Sample with 4.5 stars rating:-->
+                                <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa  fa-star-half"></i></span></a>                         
+                                <div class="time">At 15:15PM July 19th, 2016</div>
+                            </div>                    
+                        </div>                 
+                        <div class="postcont">
+                            ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...  <a href="#/" class="light">Read more</a>
+                            <div class="gallery galthumb video">
+                                <a href="/#" style="background-image: url('images/postimage2_thumb.jpg')" rel="post-gallery-2" alt="Some caption here Some caption here" title="Some caption here Some caption here"></a>
+                            </div>
+                         </div><!--/.postcont-->
+                     
+                         <div class="postaction">
+                            <div class="row">
+                                <div class="col-xs-8 theaction">
+                                    <span class="like">Like</span>
+                                    <span class="comment">Comment</span>
+                                    <span class="share">Share</span>
+                                    <div class="washare">
+                                        <ul>
+                                            <li><a href="#/"><i class="fa  fa-retweet"></i> Share now</a></li>
+                                            <li><a href="#/" data-toggle="modal" data-target="#sharewrite"><i class="fa fa-pencil-square-o"></i> Write & Share</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                               <div class="col-xs-4 thenumber">
+                                    <span class="like">818</span>
+                                    <span class="comment">12</span>
+                                    <span class="share">113</span>
+                                </div>
+                            </div>
+                         </div><!--/.postaction-->
+                         
+                         <div class="commentsearch postcomment">
+                         	<ul>
+                            	<li><form><textarea placeholder="Write a comment..."></textarea></form>
+                                </li>
+                            	<li><div class="detail"><strong><a href="profile.html">Dr. Thuy Anh</a></strong> <a href="#/"><span class="time">At 15:15PM July 19th, 2016</span></a></div>
+                                ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...
+                                	<div class="comtaction"><span class="comtlike">Like</span> <span class="comtreply">Reply</span> <span class="comtlikenum">88</span> <span class="comtreplynum">5</span></div>
+                                    <div class="commentreply commentsearch"><!--comment reply-->
+                                       	 <ul>
+                                             <li><form><textarea placeholder="Write a comment..."></textarea></form></li>
+                                             <li><div class="detail"><strong><a href="profile.html">Dr. Thuy Anh</a></strong> <a href="#/"><span class="time">At 15:15PM July 19th, 2016</span></a></div>
+                                    ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...
+                                                <div class="comtaction"><span class="comtlike">Like</span> <span class="comtreply">Reply</span> <span class="comtlikenum">88</span> <span class="comtreplynum">5</span></div>
+                                            </li>
+                               			</ul>
+                                    </div>
+                                	
+                                </li>
+                                <li><div class="detail"><strong><a href="profile.html">Dr. Thuy Anh</a></strong> <a href="#/"><span class="time">At 15:15PM July 19th, 2016</span></a></div>
+                                ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...
+                                	<div class="comtaction"><span class="comtlike">Like</span> <span class="comtreply">Reply</span> <span class="comtlikenum">88</span> <span class="comtreplynum">5</span></div>
+                                    <div class="commentreply commentsearch"><!--comment reply-->
+                                       	 <ul>
+                                             <li><form><textarea placeholder="Write a comment..."></textarea></form></li>
+                                             <li><div class="detail"><strong><a href="profile.html">Dr. Thuy Anh</a></strong> <a href="#/"><span class="time">At 15:15PM July 19th, 2016</span></a></div>
+                                    ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...
+                                                <div class="comtaction"><span class="comtlike">Like</span> <span class="comtreply">Reply</span> <span class="comtlikenum">88</span> <span class="comtreplynum">5</span></div>
+                                            </li>
+                               			</ul>
+                                    </div>
+                                	
+                                </li>
+                                <li>
+                                <div class="row">
+                            		<div class="col-xs-6"><a href="#/" class="light">View more comments</a></div>
+                            		<div class="col-xs-6 text-right">2 of 12</div>
+                                </div>
+                                </li>
+                            </ul>
+
+                         </div>
+                    </li>
+                    <li><!--If the post has images or video, the <li> needs class "hasthumb"-->
+                        <div class="row">                
+                            <div class="col-xs-1">
+                                <div class="avatar" style="background-image: url('images/avatar2_thumb.jpg')"></div>
+                            </div>                        
+                            <div class="col-xs-11 info">                            
+                                <a href="profile.html" class="username">Dr. Tuan Anh <span class="rating"><!--Sample with 4.5 stars rating:-->
+                                <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa  fa-star-half"></i></span></a>                         
+                                <div class="time">At 15:15PM July 19th, 2016</div>
+                            </div>                    
+                        </div>                 
+                        <div class="postcont">
+                            ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...  <a href="#/" class="light">Read more</a>
+                         </div><!--/.postcont-->
+                     
+                         <div class="postaction">
+                            <div class="row">
+                                <div class="col-xs-8 theaction">
+                                    <span class="like">Like</span>
+                                    <span class="comment">Comment</span>
+                                    <span class="share">Share</span>
+                                    <div class="washare">
+                                        <ul>
+                                            <li><a href="#/"><i class="fa  fa-retweet"></i> Share now</a></li>
+                                            <li><a href="#/" data-toggle="modal" data-target="#sharewrite"><i class="fa fa-pencil-square-o"></i> Write & Share</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                               <div class="col-xs-4 thenumber">
+                                    <span class="like">818</span>
+                                    <span class="comment">12</span>
+                                    <span class="share">113</span>
+                                </div>
+                            </div>
+                         </div><!--/.postaction-->
+                         
+                         <div class="commentsearch postcomment">
+                         	<ul>
+                            	<li><form><textarea placeholder="Write a comment..."></textarea></form>
+                                </li>
+                            	<li><div class="detail"><strong><a href="profile.html">Dr. Thuy Anh</a></strong> <a href="#/"><span class="time">At 15:15PM July 19th, 2016</span></a></div>
+                                ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...
+                                	<div class="comtaction"><span class="comtlike">Like</span> <span class="comtreply">Reply</span> <span class="comtlikenum">88</span> <span class="comtreplynum">5</span></div>
+                                    <div class="commentreply commentsearch"><!--comment reply-->
+                                       	 <ul>
+                                             <li><form><textarea placeholder="Write a comment..."></textarea></form></li>
+                                             <li><div class="detail"><strong><a href="profile.html">Dr. Thuy Anh</a></strong> <a href="#/"><span class="time">At 15:15PM July 19th, 2016</span></a></div>
+                                    ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...
+                                                <div class="comtaction"><span class="comtlike">Like</span> <span class="comtreply">Reply</span> <span class="comtlikenum">88</span> <span class="comtreplynum">5</span></div>
+                                            </li>
+                               			</ul>
+                                    </div>
+                                	
+                                </li>
+                                <li><div class="detail"><strong><a href="profile.html">Dr. Thuy Anh</a></strong> <a href="#/"><span class="time">At 15:15PM July 19th, 2016</span></a></div>
+                                ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...
+                                	<div class="comtaction"><span class="comtlike">Like</span> <span class="comtreply">Reply</span> <span class="comtlikenum">88</span> <span class="comtreplynum">5</span></div>
+                                    <div class="commentreply commentsearch"><!--comment reply-->
+                                       	 <ul>
+                                             <li><form><textarea placeholder="Write a comment..."></textarea></form></li>
+                                             <li><div class="detail"><strong><a href="profile.html">Dr. Thuy Anh</a></strong> <a href="#/"><span class="time">At 15:15PM July 19th, 2016</span></a></div>
+                                    ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...
+                                                <div class="comtaction"><span class="comtlike">Like</span> <span class="comtreply">Reply</span> <span class="comtlikenum">88</span> <span class="comtreplynum">5</span></div>
+                                            </li>
+                               			</ul>
+                                    </div>
+                                	
+                                </li>
+                                <li>
+                                <div class="row">
+                            		<div class="col-xs-6"><a href="#/" class="light">View more comments</a></div>
+                            		<div class="col-xs-6 text-right">2 of 12</div>
+                                </div>
+                                </li>
+                            </ul>
+
+                         </div>
+                    </li>
+                    <li class="seemore">
+                    	<a href="#/">See more results</a>
+                    </li>
+                </ul>
+                 
+            </div><!--/.post-->
+            
+            <div class="blockcont post searchresult">
+            	<h2 class="headnote"> <i class="far fa-question-circle"></i> Questions</h2>
+                <ul class="smallpostlist">
+                    <li>
+                        <div class="row">                
+                            <div class="col-xs-1">
+                                <div class="avatar" style="background-image: url('images/avatar4_thumb.jpg')"></div>
+                            </div>                        
+                            <div class="col-xs-11 info">                            
+                                <a href="profile.html" class="username">Ngoc Thuy Do</a>                         
+                                <div class="time">At 15:15PM July 19th, 2016</div>
+                            </div>                    
+                        </div>                 
+                        <div class="postcont">
+                            ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...  <a href="#/" class="light">Read more</a>
+                         </div><!--/.postcont-->
+                     
+                         <div class="postaction">
+                            <div class="row">
+                                <div class="col-xs-8 theaction">
+                                    <span class="like">Like</span>
+                                    <span class="comment">Comment</span>
+                                    <span class="share">Share</span>
+                                    <div class="washare">
+                                        <ul>
+                                            <li><a href="#/"><i class="fa  fa-retweet"></i> Share now</a></li>
+                                            <li><a href="#/" data-toggle="modal" data-target="#sharewrite"><i class="fa fa-pencil-square-o"></i> Write & Share</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                               <div class="col-xs-4 thenumber">
+                                    <span class="like">818</span>
+                                    <span class="comment">12</span>
+                                    <span class="share">113</span>
+                                </div>
+                            </div>
+                         </div><!--/.postaction-->
+                         
+                         <div class="commentsearch postcomment">
+                         	<ul>
+                            	<li><form><textarea placeholder="Write a comment..."></textarea></form>
+                                </li>
+                            	<li><div class="detail"><strong><a href="profile.html">Dr. Thuy Anh</a></strong> <a href="#/"><span class="time">At 15:15PM July 19th, 2016</span></a></div>
+                                ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...
+                                	<div class="comtaction"><span class="comtlike">Like</span> <span class="comtreply">Reply</span> <span class="comtlikenum">88</span> <span class="comtreplynum">5</span></div>
+                                    <div class="commentreply commentsearch"><!--comment reply-->
+                                       	 <ul>
+                                             <li><form><textarea placeholder="Write a comment..."></textarea></form></li>
+                                             <li><div class="detail"><strong><a href="profile.html">Dr. Thuy Anh</a></strong> <a href="#/"><span class="time">At 15:15PM July 19th, 2016</span></a></div>
+                                    ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...
+                                                <div class="comtaction"><span class="comtlike">Like</span> <span class="comtreply">Reply</span> <span class="comtlikenum">88</span> <span class="comtreplynum">5</span></div>
+                                            </li>
+                               			</ul>
+                                    </div>
+                                	
+                                </li>
+                                <li><div class="detail"><strong><a href="profile.html">Dr. Thuy Anh</a></strong> <a href="#/"><span class="time">At 15:15PM July 19th, 2016</span></a></div>
+                                ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...
+                                	<div class="comtaction"><span class="comtlike">Like</span> <span class="comtreply">Reply</span> <span class="comtlikenum">88</span> <span class="comtreplynum">5</span></div>
+                                    <div class="commentreply commentsearch"><!--comment reply-->
+                                       	 <ul>
+                                             <li><form><textarea placeholder="Write a comment..."></textarea></form></li>
+                                             <li><div class="detail"><strong><a href="profile.html">Dr. Thuy Anh</a></strong> <a href="#/"><span class="time">At 15:15PM July 19th, 2016</span></a></div>
+                                    ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...
+                                                <div class="comtaction"><span class="comtlike">Like</span> <span class="comtreply">Reply</span> <span class="comtlikenum">88</span> <span class="comtreplynum">5</span></div>
+                                            </li>
+                               			</ul>
+                                    </div>
+                                	
+                                </li>
+                                <li>
+                                <div class="row">
+                            		<div class="col-xs-6"><a href="#/" class="light">View more comments</a></div>
+                            		<div class="col-xs-6 text-right">2 of 12</div>
+                                </div>
+                                </li>
+                            </ul>
+
+                         </div>
+                    </li>
+                    <li>
+                        <div class="row">                
+                            <div class="col-xs-1">
+                                <div class="avatar" style="background-image: url('images/avatar4_thumb.jpg')"></div>
+                            </div>                        
+                            <div class="col-xs-11 info">                            
+                                <a href="profile.html" class="username">Ngoc Thuy Do</a>                         
+                                <div class="time">At 15:15PM July 19th, 2016</div>
+                            </div>                    
+                        </div>                 
+                        <div class="postcont">
+                            ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...  <a href="#/" class="light">Read more</a>
+                         </div><!--/.postcont-->
+                     
+                         <div class="postaction">
+                            <div class="row">
+                                <div class="col-xs-8 theaction">
+                                    <span class="like">Like</span>
+                                    <span class="comment">Comment</span>
+                                    <span class="share">Share</span>
+                                    <div class="washare">
+                                        <ul>
+                                            <li><a href="#/"><i class="fa  fa-retweet"></i> Share now</a></li>
+                                            <li><a href="#/" data-toggle="modal" data-target="#sharewrite"><i class="fa fa-pencil-square-o"></i> Write & Share</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                               <div class="col-xs-4 thenumber">
+                                    <span class="like">818</span>
+                                    <span class="comment">12</span>
+                                    <span class="share">113</span>
+                                </div>
+                            </div>
+                         </div><!--/.postaction-->
+                         
+                         <div class="commentsearch postcomment">
+                         	<ul>
+                            	<li><form><textarea placeholder="Write a comment..."></textarea></form>
+                                </li>
+                            	<li><div class="detail"><strong><a href="profile.html">Dr. Thuy Anh</a></strong> <a href="#/"><span class="time">At 15:15PM July 19th, 2016</span></a></div>
+                                ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...
+                                	<div class="comtaction"><span class="comtlike">Like</span> <span class="comtreply">Reply</span> <span class="comtlikenum">88</span> <span class="comtreplynum">5</span></div>
+                                    <div class="commentreply commentsearch"><!--comment reply-->
+                                       	 <ul>
+                                             <li><form><textarea placeholder="Write a comment..."></textarea></form></li>
+                                             <li><div class="detail"><strong><a href="profile.html">Dr. Thuy Anh</a></strong> <a href="#/"><span class="time">At 15:15PM July 19th, 2016</span></a></div>
+                                    ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...
+                                                <div class="comtaction"><span class="comtlike">Like</span> <span class="comtreply">Reply</span> <span class="comtlikenum">88</span> <span class="comtreplynum">5</span></div>
+                                            </li>
+                               			</ul>
+                                    </div>
+                                	
+                                </li>
+                                <li><div class="detail"><strong><a href="profile.html">Dr. Thuy Anh</a></strong> <a href="#/"><span class="time">At 15:15PM July 19th, 2016</span></a></div>
+                                ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...
+                                	<div class="comtaction"><span class="comtlike">Like</span> <span class="comtreply">Reply</span> <span class="comtlikenum">88</span> <span class="comtreplynum">5</span></div>
+                                    <div class="commentreply commentsearch"><!--comment reply-->
+                                       	 <ul>
+                                             <li><form><textarea placeholder="Write a comment..."></textarea></form></li>
+                                             <li><div class="detail"><strong><a href="profile.html">Dr. Thuy Anh</a></strong> <a href="#/"><span class="time">At 15:15PM July 19th, 2016</span></a></div>
+                                    ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...
+                                                <div class="comtaction"><span class="comtlike">Like</span> <span class="comtreply">Reply</span> <span class="comtlikenum">88</span> <span class="comtreplynum">5</span></div>
+                                            </li>
+                               			</ul>
+                                    </div>
+                                	
+                                </li>
+                                <li>
+                                <div class="row">
+                            		<div class="col-xs-6"><a href="#/" class="light">View more comments</a></div>
+                            		<div class="col-xs-6 text-right">2 of 12</div>
+                                </div>
+                                </li>
+                            </ul>
+
+                         </div>
+                    </li>
+                    <li>
+                        <div class="row">                
+                            <div class="col-xs-1">
+                                <div class="avatar" style="background-image: url('images/avatar4_thumb.jpg')"></div>
+                            </div>                        
+                            <div class="col-xs-11 info">                            
+                                <a href="profile.html" class="username">Ngoc Thuy Do</a>                         
+                                <div class="time">At 15:15PM July 19th, 2016</div>
+                            </div>                    
+                        </div>                 
+                        <div class="postcont">
+                            ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...  <a href="#/" class="light">Read more</a>
+                         </div><!--/.postcont-->
+                     
+                         <div class="postaction">
+                            <div class="row">
+                                <div class="col-xs-8 theaction">
+                                    <span class="like">Like</span>
+                                    <span class="comment">Comment</span>
+                                    <span class="share">Share</span>
+                                    <div class="washare">
+                                        <ul>
+                                            <li><a href="#/"><i class="fa  fa-retweet"></i> Share now</a></li>
+                                            <li><a href="#/" data-toggle="modal" data-target="#sharewrite"><i class="fa fa-pencil-square-o"></i> Write & Share</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                               <div class="col-xs-4 thenumber">
+                                    <span class="like">818</span>
+                                    <span class="comment">12</span>
+                                    <span class="share">113</span>
+                                </div>
+                            </div>
+                         </div><!--/.postaction-->
+                         
+                         <div class="commentsearch postcomment">
+                         	<ul>
+                            	<li><form><textarea placeholder="Write a comment..."></textarea></form>
+                                </li>
+                            	<li><div class="detail"><strong><a href="profile.html">Dr. Thuy Anh</a></strong> <a href="#/"><span class="time">At 15:15PM July 19th, 2016</span></a></div>
+                                ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...
+                                	<div class="comtaction"><span class="comtlike">Like</span> <span class="comtreply">Reply</span> <span class="comtlikenum">88</span> <span class="comtreplynum">5</span></div>
+                                    <div class="commentreply commentsearch"><!--comment reply-->
+                                       	 <ul>
+                                             <li><form><textarea placeholder="Write a comment..."></textarea></form></li>
+                                             <li><div class="detail"><strong><a href="profile.html">Dr. Thuy Anh</a></strong> <a href="#/"><span class="time">At 15:15PM July 19th, 2016</span></a></div>
+                                    ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...
+                                                <div class="comtaction"><span class="comtlike">Like</span> <span class="comtreply">Reply</span> <span class="comtlikenum">88</span> <span class="comtreplynum">5</span></div>
+                                            </li>
+                               			</ul>
+                                    </div>
+                                	
+                                </li>
+                                <li><div class="detail"><strong><a href="profile.html">Dr. Thuy Anh</a></strong> <a href="#/"><span class="time">At 15:15PM July 19th, 2016</span></a></div>
+                                ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...
+                                	<div class="comtaction"><span class="comtlike">Like</span> <span class="comtreply">Reply</span> <span class="comtlikenum">88</span> <span class="comtreplynum">5</span></div>
+                                    <div class="commentreply commentsearch"><!--comment reply-->
+                                       	 <ul>
+                                             <li><form><textarea placeholder="Write a comment..."></textarea></form></li>
+                                             <li><div class="detail"><strong><a href="profile.html">Dr. Thuy Anh</a></strong> <a href="#/"><span class="time">At 15:15PM July 19th, 2016</span></a></div>
+                                    ....<span class="highlight">The keywords</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan, sem ac elementum consectetur, enim sapien tincidunt lorem, non maximus sem elit at dui. In a odio varius In a odi enim sapien tincidunt lorem consectetur adipiscin...
+                                                <div class="comtaction"><span class="comtlike">Like</span> <span class="comtreply">Reply</span> <span class="comtlikenum">88</span> <span class="comtreplynum">5</span></div>
+                                            </li>
+                               			</ul>
+                                    </div>
+                                	
+                                </li>
+                                <li>
+                                <div class="row">
+                            		<div class="col-xs-6"><a href="#/" class="light">View more comments</a></div>
+                            		<div class="col-xs-6 text-right">2 of 12</div>
+                                </div>
+                                </li>
+                            </ul>
+
+                         </div>
+                    </li>
+                    <li class="seemore">
+                    	<a href="#/">See more results</a>
+                    </li>
+                </ul>
+                 
+            </div><!--/.post-->
+            
+            <div class="blockcont post searchresult">
+            	<h2 class="headnote"> <i class="fa fa-users"></i> Business, Group, Organization, Clinic</h2>
+                <ul class="smallpostlist">
+                    <li>
+                        <div class="row">                
+                            <div class="col-xs-2">
+                                <div class="avatar" style="background-image: url('images/avatar5_thumb.png')"></div>
+                            </div>                        
+                            <div class="col-xs-10">                            
+                                <div class="appointmentcard">                           
+                                    <div class="user"><a href="profile_clinic.html" class="username"><strong>Clovered Clinic</strong></a> <span class="rating"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa  fa-star-half"></i></span></div>
+                                    <div class="address">Texas Allergy Group, 2211 Bissonnet Houston, TX 77005</div>
+                                    <div class="phone">(281) 886-7440</div>
+                                    <div class="popularinfo">
+                                        <a href="profile.html#post"><i class="fa fa-file-alt"></i> Posts <span class="totalnum">88k</span></a>
+                                        <a href="followlist.html#liked"><i class="fa fa-thumbs-up"></i> Liked by <span class="totalnum">1898</span></a>
+                                        <a href="followlist.html#follower"><i class="fa fa-user-friends"></i> Followers<span class="totalnum">1989</span></a>                                    
+                                    </div>                                                             
+                        		</div>
+                            </div>                    
+                        </div>                                                             
+                    </li>
+                    <li>
+                        <div class="row">                
+                            <div class="col-xs-2">
+                                <div class="avatar" style="background-image: url('images/avatar5_thumb.png')"></div>
+                            </div>                        
+                            <div class="col-xs-10">                            
+                                <div class="appointmentcard">                           
+                                    <div class="user"><a href="profile_clinic.html" class="username"><strong>Clovered Clinic</strong></a> <span class="rating"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa  fa-star-half"></i></span></div>
+                                    <div class="address">Texas Allergy Group, 2211 Bissonnet Houston, TX 77005</div>
+                                    <div class="phone">(281) 886-7440</div>
+                                    <div class="popularinfo">
+                                        <a href="profile.html#post"><i class="fa fa-file-alt"></i> Posts <span class="totalnum">88k</span></a>
+                                        <a href="followlist.html#liked"><i class="fa fa-thumbs-up"></i> Liked by <span class="totalnum">1898</span></a>
+                                        <a href="followlist.html#follower"><i class="fa fa-user-friends"></i> Followers<span class="totalnum">1989</span></a>                                    
+                                    </div>                                                                                                      
+                        		</div>
+                            </div>                    
+                        </div>                                                             
+                    </li>
+                    <li>
+                        <div class="row">                
+                            <div class="col-xs-2">
+                                <div class="avatar" style="background-image: url('images/avatar5_thumb.png')"></div>
+                            </div>                        
+                            <div class="col-xs-10">                            
+                                <div class="appointmentcard">                           
+                                    <div class="user"><a href="profile_clinic.html" class="username"><strong>Clovered Clinic</strong></a> <span class="rating"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa  fa-star-half"></i></span></div>
+                                    <div class="address">Texas Allergy Group, 2211 Bissonnet Houston, TX 77005</div>
+                                    <div class="phone">(281) 886-7440</div>
+                                    <div class="popularinfo">
+                                        <a href="profile.html#post"><i class="fa fa-file-alt"></i> Posts <span class="totalnum">88k</span></a>
+                                        <a href="followlist.html#liked"><i class="fa fa-thumbs-up"></i> Liked by <span class="totalnum">1898</span></a>
+                                        <a href="followlist.html#follower"><i class="fa fa-user-friends"></i> Followers<span class="totalnum">1989</span></a>                                    
+                                    </div>                                                            
+                        		</div>
+                            </div>                    
+                        </div>                                                             
+                    </li>
+                    <li class="seemore">
+                    	<a href="#/">See more results</a>
+                    </li>
+                </ul>
+                 
+            </div><!--/.post-->
+            
+           
+            
+            
+        
+        </div><!--/.maincontent-->
+        
+    </div>  
+  </div><!--/.content-->
+  
+  <div class="footer">
+  	<div class="container">
+    	<div class="row">
+        	<div class="col-xs-6 copyright">
+            Copyright &copy; <strong>WikiAllergies</strong> 2016. All right reserved.
+            </div>
+            <div class="col-xs-6 text-right links">
+            <a href="#">About</a><a href="#">Contact</a><a href="#">Terms of Use</a>
+            </div>
+        </div>
+    </div>
+  </div><!--/.footer-->
+  
+  
+    
+
+
+    
+    
+  </body>
+</html>
