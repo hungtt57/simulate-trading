@@ -5,6 +5,9 @@ class IndexController {
   public getData = async (req: Request, res: Response, next: NextFunction) => {
     try {
       let data = await IndexService.getData();
+      if(data) {
+        data = IndexService.generateDataOrder(data)
+      }
       return res.json({
         s: 200,
         data: data

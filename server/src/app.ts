@@ -1,5 +1,5 @@
 process.env['NODE_CONFIG_DIR'] = __dirname + '/configs';
-
+import * as http from 'http'
 import compression from 'compression';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
@@ -8,14 +8,14 @@ import express from 'express';
 import helmet from 'helmet';
 import hpp from 'hpp';
 import morgan from 'morgan';
-import { connect, set } from 'mongoose';
-import swaggerJSDoc from 'swagger-jsdoc';
-import swaggerUi from 'swagger-ui-express';
-import { Routes } from '@interfaces/routes.interface';
+import {connect, set} from 'mongoose';
+import {Routes} from '@interfaces/routes.interface';
 import errorMiddleware from '@middlewares/error.middleware';
-import { logger, stream } from '@utils/logger';
+import {logger, stream} from '@utils/logger';
 import "reflect-metadata";
 import {createConnections} from "typeorm";
+const socketIoInit = require('socket.io')
+import Handler from './eventHandlers/eventHandlers'
 class App {
   public app: express.Application;
   public port: string | number;
@@ -35,12 +35,24 @@ class App {
   }
 
   public listen() {
-    this.app.listen(this.port, () => {
+    const server = http.createServer(this.app)
+    server.listen(this.port, () => {
       logger.info(`=================================`);
       logger.info(`======= ENV: ${this.env} =======`);
       logger.info(`🚀 App listening on the port ${this.port}`);
       logger.info(`=================================`);
     });
+
+    let io = socketIoInit(server, {
+      // enable cors
+      allowEIO3: true,
+      cors: {
+        origin: '*',
+        credentials: true
+      }
+    })
+    let handler = new Handler()
+    handler.handleSocket(io)
   }
 
   public getServer() {
@@ -60,10 +72,11 @@ class App {
     }
 
   }
+
   private async connectOrmDatabase() {
     try {
       let linkEntity = "src/entity/*.{ts,js}"
-      if(process.env.NODE_ENV=== 'production') {
+      if (process.env.NODE_ENV === 'production') {
         linkEntity = "dist/entity/*.{ts,js}"
       }
       await createConnections([{
@@ -72,7 +85,7 @@ class App {
         host: process.env.WIKI_HOST,
         port: Number(process.env.WIKI_PORT),
         username: process.env.WIKI_USER,
-        password:  process.env.WIKI_PASSWORD,
+        password: process.env.WIKI_PASSWORD,
         database: process.env.WIKI_DB,
         "entities": [
           linkEntity
@@ -88,6 +101,7 @@ class App {
     }
 
   }
+
   private initializeMiddlewares() {
     this.app.use(morgan(config.get('log.format'), { stream }));
     this.app.use(cors({ origin: config.get('cors.origin'), credentials: config.get('cors.credentials') }));
@@ -105,23 +119,6 @@ class App {
       this.app.use('/v1/', route.router);
     });
   }
-
-  // private initializeSwagger() {
-  //   const options = {
-  //     swaggerDefinition: {
-  //       info: {
-  //         title: 'REST API',
-  //         version: '1.0.0',
-  //         description: 'Example docs',
-  //       },
-  //     },
-  //     apis: ['swagger.yaml'],
-  //   };
-  //
-  //   const specs = swaggerJSDoc(options);
-  //   this.app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
-  // }
-
   private initializeErrorHandling() {
     this.app.use(errorMiddleware);
   }
